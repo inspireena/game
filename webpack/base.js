@@ -8,7 +8,7 @@ module.exports = {
   devtool: "eval-source-map",
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname,"dist"),
+    path: path.join(__dirname, 'dist'),
     filename: "index_bundle.js"
   },
   module: {
@@ -30,7 +30,7 @@ module.exports = {
         use: "babel-loader"
       },
       {
-        test: [/\.vert$/, /\.frag$/],
+        test: [/\.vert$/, /\.frag$/],    
         use: "raw-loader"
       },
       {

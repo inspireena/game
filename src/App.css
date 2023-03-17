@@ -24,6 +24,12 @@
   color: white;
 }
 
+.test {
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 50%;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -32,7 +38,20 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  height: 20px;
+  width: 200px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  place-items: center;
 }
