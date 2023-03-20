@@ -8,8 +8,9 @@ module.exports = {
   devtool: "eval-source-map",
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: "index_bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: "index_bundle.js",
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -30,7 +31,7 @@ module.exports = {
         use: "babel-loader"
       },
       {
-        test: [/\.vert$/, /\.frag$/],    
+        test: [/\.vert$/, /\.frag$/],
         use: "raw-loader"
       },
       {
@@ -38,6 +39,9 @@ module.exports = {
         use: "file-loader"
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
